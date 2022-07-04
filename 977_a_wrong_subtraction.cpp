@@ -1,14 +1,13 @@
 #include <string>
 #include <iostream>
-#include <sstream>
 
 /*
 https://codeforces.com/problemset/problem/977/A
 A. Wrong Subtraction
-time limit per test1 second
-memory limit per test256 megabytes
-input: standard input
-output: standard output
+time limit per test  : 1 second
+memory limit per test: 256 megabytes
+input                : standard input
+output               : standard output
 
 Little girl Tanya is learning how to decrease a number by one, but she does it wrong with
 a number consisting of two or more digits. Tanya subtracts one from a number by the
@@ -24,8 +23,8 @@ to print the result after all k subtractions.
 It is guaranteed that the result will be positive integer number.
 
 Input
-The first line of the input contains two integer numbers n and k (2≤n≤109, 1≤k≤50) — the
-number from which Tanya will subtract and the number of subtractions correspondingly.
+The first line of the input contains two integer numbers n and k (2 ≤ n≤ 10^9, 1 ≤ k≤ 50)
+— the number from which Tanya will subtract and the number of subtractions correspondingly.
 
 Output
 Print one integer number — the result of the decreasing n by one k times.
@@ -46,15 +45,10 @@ uint64_t problem_977(uint64_t n, uint64_t k) {
 }
 
 int main() {
-  std::string line;
-  std::getline(std::cin, line);
+  int n, k;
+  std::cin >> n;
+  std::cin >> k;
 
-  std::stringstream ss(line);
-
-  std::string k, n;
-  std::getline(ss, n, ' ');
-  std::getline(ss, k, ' ');
-
-  int result = problem_977(std::atoi(n.c_str()), std::atoi(k.c_str()));
+  int result = problem_977(n, k);
   std::cout << result;
 }
