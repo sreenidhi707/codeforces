@@ -50,5 +50,5 @@ int main() {
   std::cin >> k;
 
   int result = problem_977(n, k);
-  std::cout << result;
+  std::cout << result << std::endl;
 }
