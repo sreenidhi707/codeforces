@@ -4,19 +4,6 @@
 #include <algorithm> // needed for std::sort()
 #include <numeric>   // needed for std::accumulate()
 
-/*
-https://codeforces.com/problemset/problem/160/A
-
-A. Twins
-
-time limit per test  : 2 seconds
-memory limit per test: 256 megabytes
-input                : standard input
-output               : standard output
-
-PROBLEM STATEMENT
-*/
-
 int problem_160A_twins(std::vector<int>& coinValues) {
   // sort in descending order
   std::sort(coinValues.rbegin(), coinValues.rend());
