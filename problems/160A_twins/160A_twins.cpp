@@ -5,11 +5,11 @@
 #include <numeric>   // needed for std::accumulate()
 
 /*
-URL
+https://codeforces.com/problemset/problem/160/A
 
-PROBLEM TITLE
+A. Twins
 
-time limit per test  : 1 second
+time limit per test  : 2 seconds
 memory limit per test: 256 megabytes
 input                : standard input
 output               : standard output
