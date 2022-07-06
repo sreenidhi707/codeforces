@@ -1,0 +1,24 @@
+#include <string>
+#include <iostream>
+
+bool problem_58A(const std::string& typedWord) {
+  std::string word("hello");
+
+  size_t i = 0, j = 0;
+  while(i < word.size() and j < typedWord[j]) {
+    if(word[i] == typedWord[j]) {
+      i++;
+    }
+    j++;
+  }
+  return i == word.size();
+}
+
+int main() {
+  std::string typedWord;
+  std::cin >> typedWord;
+
+  std::string result = problem_58A(typedWord) ? "YES" : "NO";
+
+  std::cout << result << std::endl;
+}
