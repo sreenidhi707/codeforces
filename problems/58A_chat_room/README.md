@@ -38,15 +38,7 @@ NO
 ```
 
 ## Solution
-Two main points to consider in this problem
-1. The amount of money to be taken has to be **strictly** more than what is left AND
-2. We need to **minimize** the number of coins taken
-
-A strategy to employ is
-1. First sort the given coins by decreasing order of their value.
-2. Starting from the largest value, keep taking the coins until the value taken is less than or equal to the value left.
-
-Since we always keep taking the largest possible coin denomination, we are guaranteed to minimize the number of coins
+Two pointer approach is used to solve this problem.
 
 ## Code
 ```
