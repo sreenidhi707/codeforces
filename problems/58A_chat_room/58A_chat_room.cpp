@@ -7,9 +7,10 @@ bool problem_58A(const std::string& typedWord) {
   size_t i = 0, j = 0;
   while(i < word.size() and j < typedWord[j]) {
     if(word[i] == typedWord[j]) {
+      // increment only when character matches
       i++;
     }
-    j++;
+    j++; // increment always
   }
 
   // at the end, we want to make sure that all characters in the word "hello" are 'consumed'
