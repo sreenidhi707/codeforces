@@ -11,6 +11,9 @@ bool problem_58A(const std::string& typedWord) {
     }
     j++;
   }
+
+  // at the end, we want to make sure that all characters in the word "hello" are
+  // 'consumed'
   return i == word.size();
 }
 
