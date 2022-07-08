@@ -65,4 +65,4 @@ have equal shoe sizes, and thus anyone can wear anyone's shoes.
 In the second test case, it can be shown that no valid shuffling is possible.
 
 ## Solution
-
+[Image](1691B_shoe_shuffling.jpg)
