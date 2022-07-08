@@ -29,7 +29,7 @@ cases. Description of the test cases follows.
 
 The first line of each test case contains a single integer $n (1≤n≤10^5)$ — the number of students.
 
-The second line of each test case contains $n$ integers $s_1,s_2,…,s_n (1≤s_i≤10^9$, and for all $1≤i<n, s_i≤s_i+1$) — the shoe
+The second line of each test case contains $n$ integers $s_1,s_2,…,s_n (1≤s_i≤10^9$, and for all $1≤i<n, s_i≤s_i+1)$ — the shoe
 sizes of the students.
 
 It is guaranteed that the sum of $n$ over all test cases does not exceed $10^5$.
