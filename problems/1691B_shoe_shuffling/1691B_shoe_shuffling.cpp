@@ -3,6 +3,8 @@
 #include <vector>
 #include <numeric> // needed for std::iota
 
+// Given an array and an half open range [begin, end), rotates the content of the
+// array inside the range to right by 1 element
 void rotateInRange(std::vector<int>& arr,
                    size_t begin, size_t end) {
   int lastItem = arr[end - 1];
@@ -12,6 +14,9 @@ void rotateInRange(std::vector<int>& arr,
   arr[begin] = lastItem;
 }
 
+// Given an array and a list of half open ranges [begin, end), rotates the content of each
+// of the array inside each of the range to right by 1 element, note that rotation happens
+// only within a group
 void rotateInGroups(std::vector<int>& arr,
                     std::vector<std::pair<int, int>>& groupLocations) {
   for (const auto& groupLocation : groupLocations) {
@@ -39,7 +44,7 @@ problem_1691B_shoe_shuffling(std::vector<int>& shoeSizes) {
   }
 
   std::vector<int> nums(shoeSizes.size());
-  std::iota(nums.begin(), nums.end(), 1);
+  std::iota(nums.begin(), nums.end(), 1); // [1, 2, 3, 4, 5 ...]
   rotateInGroups(nums, groupLocations);
 
   return nums;

@@ -65,4 +65,14 @@ have equal shoe sizes, and thus anyone can wear anyone's shoes.
 In the second test case, it can be shown that no valid shuffling is possible.
 
 ## Solution
-[Image](1691B_shoe_shuffling.jpg)
+Key points which leads to the solution are
+1. The shoe sizes are given in increasing order
+2. **Every** person should get a new pair of shoes
+3. If  the given shoe sizes are in strictly increasing order (no flat portions), like the second example, there exists
+   no permutation.
+
+These lead to key ideas
+1. The shoe sizes should be made of flat regions where sizes are same, it is in those regions where we can permute.
+2. If we call the flat regions where the shoe sizes are same as a *group* then each *group* must be atleast 2 wide.
+
+![Image](1691B_shoe_shuffling.jpg)
