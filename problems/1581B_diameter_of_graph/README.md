@@ -68,7 +68,7 @@ Note the following points
 1. We want to graph to be a **connected** graph, so we don't want lonely nodes, unless the graph has only one node.
 2. We don't want self loops and multiple edges between nodes.
    * Given $n$ nodes, we need atleast $n-1$ edges to make the graph connected.
-   * Given $n$ nodes, we can have at max $^nC_2$ number of edges.
+   * Given $n$ nodes, we can have at max $ C_2$ number of edges.
 
 Look at the image below for $n=4$, as we keep adding more and more edges, graph $4$ is when it becomes
 connected, at which point the diameter is defined and is $2$. From this point onward adding more edges has
