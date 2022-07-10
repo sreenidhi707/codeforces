@@ -65,7 +65,7 @@ Although the above approach seems doable, it feels like an overkill for this pro
 that we can attempt.
 
 Note the following points
-1. We want to graph to be a **connected** graph, so we don't want lonely nodes, unless the graph has only one node.
+1. We want the graph to be a **connected** graph, so we don't want lonely nodes, unless the graph has only one node.
 2. We don't want self loops and multiple edges between nodes.
    * Given $n$ nodes, we need atleast $n-1$ edges to make the graph connected.
    * Given $n$ nodes, we can have at max ${n\choose2}$ number of edges.
