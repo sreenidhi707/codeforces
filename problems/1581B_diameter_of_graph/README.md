@@ -69,6 +69,29 @@ Note the following points
 2. We don't want self loops and multiple edges between nodes.
    * Given $n$ nodes, we need atleast $n-1$ edges to make the graph connected.
    * Given $n$ nodes, we can have at max $^nC_2$ number of edges.
-3.
+
+Look at the image below for $n=4$, as we keep adding more and more edges, graph $4$ is when it becomes
+connected, at which point the diameter is defined and is $2$. From this point onward adding more edges has
+no effect on the diameter, until the graph becomes **fully connected** at which point the diameter becomes
+$1$. The green path indicates the path of the diameter.
+
+So, the possible values of the diameter are $1$ or $2$ ($0$ if $n=1$)
+
+![Image](1581B_diameter_of_graph.jpg)
+
+In the code snippet below
+```
+// we want the graph to be a 'connnected graph'
+if(numEdges < numNodes - 1 or
+   numEdges > numEdgesInFullyConnectedGraph) {
+  std::cout << "NO" << std::endl;
+  return;
+}
+```
+
+The condition `numEdges < numNodes - 1` is when we have too few edges and the condition `numEdges > numEdgesInFullyConnectedGraph` is when we have too many edges.
+
+The reason why we have `int64_t diameter = k - 2;` is that the problem wants $diameter < k - 1$, it is simply easier to
+deal with $diameter <= some value$, with the modified $k$
 
 

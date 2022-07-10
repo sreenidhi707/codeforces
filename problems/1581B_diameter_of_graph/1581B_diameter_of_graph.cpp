@@ -14,6 +14,7 @@ void problem_1581B_diameter_of_graph(int64_t numNodes, int64_t numEdges, int64_t
     return;
   }
 
+  // corner case
   if(numNodes == 1 and diameterLessEqualThan == 0) {
     std::cout << "YES" << std::endl;
     return;
@@ -35,7 +36,7 @@ int main() {
   while (numTests--) {
     int64_t numNodes, numEdges, k;
     std::cin >> numNodes >> numEdges >> k;
-    int64_t diameter = k - 2;
+    int64_t diameter = k - 2; // since we want diameter to be strictly less than k - 1
     problem_1581B_diameter_of_graph(numNodes, numEdges, diameter);
   }
 }
