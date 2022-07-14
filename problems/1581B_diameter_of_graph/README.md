@@ -54,6 +54,7 @@ In the second test case, the graph's diameter can only be 2.
 In the third test case, the graph's diameter can only be 1.
 
 ## Solution
+### Keywords: Graphs
 This is somewhat a tricky problem, basically the problem gives certain parameters of a graphs that we want, i.e, number
 of nodes $n$, number of edges $m$ and upper bound on the diameter $k-1$ (it is weird that they choose to use $k-1$
 instead of simply using $k$) and asks whether it is possible to construct such a graph.
