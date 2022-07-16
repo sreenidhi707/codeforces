@@ -76,7 +76,7 @@ connected, at which point the diameter is defined and is $2$. From this point on
 no effect on the diameter, until the graph becomes **fully connected** at which point the diameter becomes
 $1$. The green path indicates the path of the diameter.
 
-So, the possible values of the diameter are $1$ or $2$ ($0$ if $n=1$)
+So, the possible values of the diameter are $0$ (only if $n=1$), $1$ or $2$
 
 ![Image](1581B_diameter_of_graph.jpg)
 
