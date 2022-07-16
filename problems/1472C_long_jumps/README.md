@@ -3,7 +3,7 @@
 # Problem 1472C Long Jumps
 
 <p align="center">
-time limit per test: 1 seconds <br />
+time limit per test: 2 seconds <br />
 memory limit per test: 256 megabytes <br />
 input: standard input <br />
 output: standard output <br />
@@ -76,13 +76,13 @@ This is a simple case of Dynamic Programming problem. To start off, we can imple
 
 The picture below shows how the walk happens for the first example
 
-![Image](1581B_diameter_of_graph.jpg)
+![Image](1472C_long_jumps_brute_force_1.jpg)
 
 Looking above, we can see that the case for $i=3$, the jump from location $2$ is exactly same as the jump from the same location for the case of $i=2$.
 
 So this means that we are repeatedly performing similar jumps and the problem becomes more apparent for the case when the given array is $[1, 1, 1, 1, 1]$ as shown in the picture below.
 
-![Image](1581B_diameter_of_graph.jpg)
+![Image](1472C_long_jumps_brute_force_2.jpg)
 
 The code snippet below implements the brute force approach
 ```cpp
@@ -104,7 +104,6 @@ void problem_1472C_long_jumps_brute_force(std::vector<int>& nums) {
 | ----------------- | ------------- |
 | Time Complexity   | $O(n^2)$      |
 | Space Complexity  | $O(1)$        |
-|                   |               |
 
 ---
 
@@ -140,7 +139,6 @@ void problem_1472C_long_jumps_dynamic_programming(std::vector<size_t>& nums) {
 | ----------------- | ------------- |
 | Time Complexity   | $O(n)$        |
 | Space Complexity  | $O(n)$        |
-|                   |               |
 
 ---
 Here is the full code.
