@@ -95,4 +95,49 @@ The condition `numEdges < numNodes - 1` is when we have too few edges and the co
 The reason why we have `int64_t diameter = k - 2;` is that the problem wants $diameter < k - 1$, it is simply easier to
 deal with $diameter <= some value$, with the modified $k$
 
+### Code
+```
+#include <string>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <numeric>
 
+void problem_1581B_diameter_of_graph(int64_t numNodes, int64_t numEdges, int64_t diameterLessEqualThan) {
+  int64_t numEdgesInFullyConnectedGraph = (numNodes * (numNodes - 1)) / 2;
+
+  // we want the graph to be a 'connnected graph'
+  if(numEdges < numNodes - 1 or
+     numEdges > numEdgesInFullyConnectedGraph) {
+    std::cout << "NO" << std::endl;
+    return;
+  }
+
+  // corner case
+  if(numNodes == 1 and diameterLessEqualThan == 0) {
+    std::cout << "YES" << std::endl;
+    return;
+  }
+
+  // At this point we can assume that the graph is a 'connected graph'
+  if(diameterLessEqualThan >= 2 or
+     diameterLessEqualThan == 1 and numEdges == numEdgesInFullyConnectedGraph) {
+    std::cout << "YES" << std::endl;
+    return;
+  }
+  std::cout << "NO" << std::endl;
+}
+
+int main() {
+  int numTests = 0;;
+  std::cin >> numTests;
+  std::vector<int> data;
+  while (numTests--) {
+    int64_t numNodes, numEdges, k;
+    std::cin >> numNodes >> numEdges >> k;
+    int64_t diameter = k - 2; // since we want diameter to be strictly less than k - 1
+    problem_1581B_diameter_of_graph(numNodes, numEdges, diameter);
+  }
+}
+
+```
