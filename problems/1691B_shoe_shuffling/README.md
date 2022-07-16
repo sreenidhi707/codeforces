@@ -7,6 +7,7 @@ time limit per test: 1 seconds <br />
 memory limit per test: 256 megabytes <br />
 input: standard input <br />
 output: standard output <br />
+https://codeforces.com/contest/1691/problem/B
 </p>
 
 A class of students got bored wearing the same pair of shoes every day, so they decided to shuffle their shoes among
@@ -65,6 +66,8 @@ have equal shoe sizes, and thus anyone can wear anyone's shoes.
 In the second test case, it can be shown that no valid shuffling is possible.
 
 ## Solution
+### Keywords: Greedy, Two Pointers
+
 Key points which leads to the solution are
 1. The shoe sizes are given in increasing order
 2. **Every** person should get a new pair of shoes
@@ -76,3 +79,83 @@ These lead to key ideas
 2. If we call the flat regions where the shoe sizes are same as a *group* then each *group* must be atleast 2 wide.
 
 ![Image](1691B_shoe_shuffling.jpg)
+
+
+### Code
+```cpp
+#include <string>
+#include <iostream>
+#include <vector>
+#include <numeric> // needed for std::iota
+
+// Given an array and an half open range [begin, end), rotates the content of the
+// array inside the range to right by 1 element
+void rotateInRange(std::vector<int>& arr,
+                   size_t begin, size_t end) {
+  int lastItem = arr[end - 1];
+  for (size_t i = end - 1; i > begin; i--) {
+    arr[i] = arr[i - 1];
+  }
+  arr[begin] = lastItem;
+}
+
+// Given an array and a list of half open ranges [begin, end), rotates the content of each
+// of the array inside each of the range to right by 1 element, note that rotation happens
+// only within a group
+void rotateInGroups(std::vector<int>& arr,
+                    std::vector<std::pair<int, int>>& groupLocations) {
+  for (const auto& groupLocation : groupLocations) {
+    rotateInRange(arr, groupLocation.first, groupLocation.second);
+  }
+}
+
+std::vector<int>
+problem_1691B_shoe_shuffling(std::vector<int>& shoeSizes) {
+  int begin = 0, end = 0;
+  std::vector<std::pair<int, int>> groupLocations;
+  while (begin < shoeSizes.size()) {
+    while (end < shoeSizes.size() and
+           shoeSizes[begin] == shoeSizes[end]) {
+      end++;
+    }
+
+    // we want the group size to be atleast 2
+    if(end - begin == 1) {
+      return {-1};
+    }
+
+    groupLocations.push_back({begin, end}); // half open range [begin, end)
+    begin = end;
+  }
+
+  std::vector<int> nums(shoeSizes.size());
+  std::iota(nums.begin(), nums.end(), 1); // [1, 2, 3, 4, 5 ...]
+  rotateInGroups(nums, groupLocations);
+
+  return nums;
+}
+
+int main() {
+  int numTests = 1;
+  std::cin >> numTests;
+  while (numTests--) {
+    int numStudents = 0;
+    std::cin >> numStudents;
+
+    std::vector<int> shoeSizes;
+    int shoeSize = 0;
+    while (numStudents--) {
+      std::cin >> shoeSize;
+      shoeSizes.push_back(shoeSize);
+    }
+
+    // std::vector<int> shoeSizes = {1, 1, 2, 3, 3, 3, 3, 44, 44};
+    std::vector<int> permutation = problem_1691B_shoe_shuffling(shoeSizes);
+    for(const auto& num : permutation) {
+      std::cout << num << " ";
+    }
+    std::cout << std::endl;
+  }
+}
+
+```
