@@ -116,7 +116,7 @@ This approach is precisely dynamic programming, because instead of repeatedly so
 
 The picture below shows how the jumps look for an example
 
-![Image](1581B_diameter_of_graph.jpg)
+![Image](1472C_long_jumps_dp.jpg)
 
 The code snippet below implements the dynamic programming approach
 ```cpp
