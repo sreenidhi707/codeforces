@@ -81,7 +81,7 @@ So, the possible values of the diameter are $0$ (only if $n=1$), $1$ or $2$
 ![Image](1581B_diameter_of_graph.jpg)
 
 In the code snippet below
-```
+```cpp
 // we want the graph to be a 'connnected graph'
 if(numEdges < numNodes - 1 or
    numEdges > numEdgesInFullyConnectedGraph) {
@@ -96,7 +96,7 @@ The reason why we have `int64_t diameter = k - 2;` is that the problem wants $di
 deal with $diameter <= some value$, with the modified $k$
 
 ### Code
-```
+```cpp
 #include <string>
 #include <iostream>
 #include <vector>
