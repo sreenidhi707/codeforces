@@ -3,7 +3,7 @@
 # Problem 1581B Diameter of Graph
 
 <p align="center">
-time limit per test: 1 second1 <br />
+time limit per test: 1 second <br />
 memory limit per test: 256 megabytes <br />
 input: standard input <br />
 output: standard output <br />
