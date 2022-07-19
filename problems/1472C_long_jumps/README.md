@@ -3,12 +3,12 @@
 # Problem 1472C Long Jumps
 
 <p align="center">
-time limit per test: 2 seconds <br />
-memory limit per test: 256 megabytes <br />
-input: standard input <br />
-output: standard output <br />
-https://codeforces.com/contest/1472/problem/C
+https://codeforces.com/contest/1472/problem/C <br />
+Keywords: Dynamic Programming, Graphs, Recursion <br />
+Date First Written: 16<sup>th</sup> July 2022 <br />
+Most Recent Edit: 19<sup>th</sup> July 2022
 </p>
+<hr>
 
 Polycarp found under the Christmas tree an array $a$ of $n$ elements and instructions for playing with it:
 
@@ -100,7 +100,7 @@ void problem_1472C_long_jumps_brute_force(std::vector<int>& nums) {
   std::cout << maxScore << std::endl;
 }
 ```
-|                   |               |
+|       is this bold            |               |
 | ----------------- | ------------- |
 | Time Complexity   | $O(n^2)$      |
 | Space Complexity  | $O(1)$        |
