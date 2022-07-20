@@ -3,12 +3,13 @@
 # Problem 1581B Diameter of Graph
 
 <p align="center">
-time limit per test: 1 second <br />
-memory limit per test: 256 megabytes <br />
-input: standard input <br />
-output: standard output <br />
-https://codeforces.com/problemset/problem/1581/B
+https://codeforces.com/problemset/problem/1581/B <br />
+Keywords: Graphs <br />
+Date First Written: 9<sup>th</sup> July 2022 <br />
+Most Recent Edit: 20<sup>th</sup> July 2022
 </p>
+<hr>
+
 
 CQXYM wants to create a connected undirected graph with $n$ nodes and $m$ edges, and the diameter of the graph must be
 strictly less than $k−1$. Also, CQXYM doesn't want a graph that contains self-loops or multiple edges (i.e. each edge
