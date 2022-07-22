@@ -66,8 +66,8 @@ Since we always keep taking the largest possible coin denomination, we are guara
 
 |                   |               |
 | ----------------- | ------------- |
-| Time Complexity   | $O(nlog)$, for sorting        |
-| Space Complexity  | $O(n)$, due to sorting        |
+| Time Complexity   | $O(NlogN)$, for sorting        |
+| Space Complexity  | $O(N)$, due to sorting        |
 
 ```cpp
 #include <string>
