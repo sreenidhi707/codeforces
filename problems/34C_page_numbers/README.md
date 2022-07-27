@@ -57,8 +57,10 @@ Note that it is the 3rd step which is somewhat tricky and needs some explanation
 let us define a "group" as a section of the array which has numbers continually increasing
 by exactly 1. For example
 
+```
 Numbers ---------> 2, 3, 6, 7, 8, 10, 15, 16
 Three groups ----> ****  ^^^^^^^      ######
+````
 
 There are 3 groups in the above list of numbers with three separate symbols underneath them.
 
