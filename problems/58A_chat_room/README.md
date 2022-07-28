@@ -4,7 +4,7 @@
 
 <p align="center">
 https://codeforces.com/problemset/problem/58/A <br />
-Keywords: Dynamic Programming, Graphs, Recursion <br />
+Keywords: 2 - Pointers, Greedy, String <br />
 Date First Written: 28<sup>th</sup> July 2022 <br />
 Most Recent Edit: 28<sup>th</sup> July 2022
 </p>
