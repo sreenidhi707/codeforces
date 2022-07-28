@@ -2,11 +2,11 @@
 #include <iostream>
 
 bool problem_58A(const std::string& typedWord) {
-  std::string word("hello");
+  std::string helloWord("hello");
 
   size_t i = 0, j = 0;
-  while(i < word.size() and j < typedWord[j]) {
-    if(word[i] == typedWord[j]) {
+  while(i < helloWord.size() and j < typedWord[j]) {
+    if(helloWord[i] == typedWord[j]) {
       // increment only when character matches
       i++;
     }
@@ -14,7 +14,7 @@ bool problem_58A(const std::string& typedWord) {
   }
 
   // at the end, we want to make sure that all characters in the word "hello" are 'consumed'
-  return i == word.size();
+  return i == helloWord.size();
 }
 
 int main() {

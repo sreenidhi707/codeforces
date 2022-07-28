@@ -1,13 +1,14 @@
 
 
 # Problem 58A Chat room
-## (https://codeforces.com/problemset/problem/58/A)
+
 <p align="center">
-time limit per test: 1 seconds <br />
-memory limit per test: 256 megabytes <br />
-input: standard input <br />
-output: standard output <br />
+https://codeforces.com/problemset/problem/58/A <br />
+Keywords: Dynamic Programming, Graphs, Recursion <br />
+Date First Written: 28<sup>th</sup> July 2022 <br />
+Most Recent Edit: 28<sup>th</sup> July 2022
 </p>
+<hr>
 
 Vasya has recently learned to type and log on to the Internet. He immediately entered a chat room and decided to say
 hello to everybody. Vasya typed the word `s`. It is considered that Vasya managed to say hello if several letters can be
@@ -46,16 +47,16 @@ Two pointer approach is used to solve this problem.
 #include <iostream>
 
 bool problem_58A(const std::string& typedWord) {
-  std::string word("hello");
+  std::string helloWord("hello");
 
   size_t i = 0, j = 0;
-  while(i < word.size() and j < typedWord[j]) {
-    if(word[i] == typedWord[j]) {
+  while(i < helloWord.size() and j < typedWord[j]) {
+    if(helloWord[i] == typedWord[j]) {
       i++;
     }
     j++;
   }
-  return i == word.size();
+  return i == helloWord.size();
 }
 
 int main() {
