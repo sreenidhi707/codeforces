@@ -37,8 +37,8 @@ YES
 Effectively, the problem is **"Given a binary array, find the longest run of either zeros
 or ones"** .If the longest run is longer than 7, then it is a dangerous situation.
 
-A simple 2-pointer based solution works here. Let us define a **group** as any consecutive
-run of zeros or ones.
+A simple 2-pointer based solution works here. Let us define a **group** as "any consecutive
+run of zeros or ones".
 * First find a group
 * Count how big this group is
 * If this group is larger than 7, print `YES`, otherwise keep looking for next group
