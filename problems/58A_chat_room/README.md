@@ -42,7 +42,7 @@ NO
 Two pointer approach is used to solve this problem.
 
 ## Code
-```
+```cpp
 #include <string>
 #include <iostream>
 
