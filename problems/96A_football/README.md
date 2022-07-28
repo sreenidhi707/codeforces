@@ -6,7 +6,7 @@
 https://codeforces.com/problemset/problem/96/A <br />
 Keywords: 2 - Pointer, String <br />
 Date First Written: 28<sup>th</sup> July 2022 <br />
-Most Recent Edit: 28<sup>th</sup> July 2022
+Most Recent Edit: 28<sup>th</sup> July 2022  <br />
 Difficulty: 900
 </p>
 <hr>
