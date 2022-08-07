@@ -1,5 +1,3 @@
-
-
 # Problem 1472C Long Jumps
 
 <p align="center">
@@ -67,7 +65,6 @@ In the third test case, the maximum score can be achieved by choosing $i=2$.
 In the fourth test case, the maximum score can be achieved by choosing $i=1$.
 
 ## Solution
-### Keywords: Dynamic Programming, Graphs, Recursion
 
 ### Brute Force
 This is a simple case of Dynamic Programming problem. To start off, we can implement a brute force version which
@@ -100,7 +97,7 @@ void problem_1472C_long_jumps_brute_force(std::vector<int>& nums) {
   std::cout << maxScore << std::endl;
 }
 ```
-|       is this bold            |               |
+|                   |               |
 | ----------------- | ------------- |
 | Time Complexity   | $O(n^2)$      |
 | Space Complexity  | $O(1)$        |
