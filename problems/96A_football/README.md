@@ -1,5 +1,3 @@
-
-
 # Problem 96A Football
 
 <p align="center">
@@ -44,6 +42,11 @@ run of zeros or ones".
 * If this group is larger than 7, print `YES`, otherwise keep looking for next group
 * If no group is found to be larger than 7, print `NO`.
 
+|                   |               |
+| ----------------- | ------------- |
+| Time Complexity   | $O(n)$      |
+| Space Complexity  | $O(1)$        |
+
 ```cpp
 bool problem_96A(const std::string& playerPositions) {
   const size_t maximumConsecutivePlayers = 7;
@@ -82,9 +85,6 @@ int main() {
   std::cout << (result ? "YES" : "NO") << std::endl;
 }
 ```
-|                   |               |
-| ----------------- | ------------- |
-| Time Complexity   | $O(n)$      |
-| Space Complexity  | $O(1)$        |
+
 
 ---
