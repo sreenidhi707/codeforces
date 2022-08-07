@@ -3,12 +3,12 @@
 # Problem 1691B Shoe Shuffling
 
 <p align="center">
-time limit per test: 1 seconds <br />
-memory limit per test: 256 megabytes <br />
-input: standard input <br />
-output: standard output <br />
-https://codeforces.com/contest/1691/problem/B
+https://codeforces.com/contest/1691/problem/B <br />
+Keywords: Greedy, Two Pointers <br />
+Date First Written: 16<sup>th</sup> July 2022 <br />
+Most Recent Edit: 8<sup>th</sup> August 2022
 </p>
+<hr>
 
 A class of students got bored wearing the same pair of shoes every day, so they decided to shuffle their shoes among
 themselves. In this problem, a pair of shoes is inseparable and is considered as a single object.
@@ -66,7 +66,6 @@ have equal shoe sizes, and thus anyone can wear anyone's shoes.
 In the second test case, it can be shown that no valid shuffling is possible.
 
 ## Solution
-### Keywords: Greedy, Two Pointers
 
 Key points which leads to the solution are
 1. The shoe sizes are given in increasing order
@@ -80,7 +79,10 @@ These lead to key ideas
 
 ![Image](1691B_shoe_shuffling.jpg)
 
-
+|                   |               |
+| ----------------- | ------------- |
+| Time Complexity   | $O(N)$        |
+| Space Complexity  | $O(1)$        |
 ### Code
 ```cpp
 #include <string>
