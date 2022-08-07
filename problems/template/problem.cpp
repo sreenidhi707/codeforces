@@ -4,6 +4,10 @@
 #include <vector>
 #include <set>
 #include <algorithm>
+#include <numeric>
+#include <limits.h>
+#include <map>
+#include <unordered_map>
 
 template <typename T>
 void printVector(const std::vector<T>& nums) {
@@ -12,7 +16,7 @@ void printVector(const std::vector<T>& nums) {
   }
 }
 
-void problem_1472C_long_jumps_brute_force(std::vector<int>& nums) {
+void problem_number_title(std::vector<int>& nums) {
   uint64_t maxScore = 0;
   for (size_t i = 0; i < nums.size(); i++) {
     uint64_t thisRunScore = 0;
@@ -26,34 +30,19 @@ void problem_1472C_long_jumps_brute_force(std::vector<int>& nums) {
   std::cout << maxScore << std::endl;
 }
 
-void problem_1472C_long_jumps_dynamic_programming(std::vector<size_t>& nums) {
-  size_t N = nums.size();
-  std::vector<size_t> maxScores = nums;
-
-  uint64_t maxScore = 0;
-  for (int i = N - 1; i >= 0; i--) {
-    if(i + nums[i] < N) {
-      maxScores[i] += maxScores[i + nums[i]];
-    }
-    maxScore = std::max(maxScore,  maxScores[i]);
-  }
-  std::cout << maxScore << std::endl;
-}
-
 int main() {
+  // freopen("input.txt", "r", stdin);
   int numTests = 0;;
   std::cin >> numTests;
   while (numTests--) {
     int arrayLength = 0;
     std::cin >> arrayLength;
 
-    std::vector<size_t> nums;
+    std::vector<int> nums(arrayLength);
     for (size_t i = 0; i < arrayLength; i++) {
-      int num = 0;
-      std::cin >> num;
-      nums.push_back(num);
+      std::cin >> nums[i];
     }
 
-    problem_1472C_long_jumps_dynamic_programming(nums);
+    problem_number_title(nums);
   }
 }
