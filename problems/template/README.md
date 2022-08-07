@@ -1,5 +1,3 @@
-
-
 # Problem 1472C Long Jumps
 
 <p align="center">
@@ -133,13 +131,12 @@ void problem_1472C_long_jumps_dynamic_programming(std::vector<size_t>& nums) {
 }
 ```
 
+---
+Here is the full code.
 |                   |               |
 | ----------------- | ------------- |
 | Time Complexity   | $O(n)$        |
 | Space Complexity  | $O(n)$        |
-
----
-Here is the full code.
 ### Code
 ```cpp
 #include <string>
@@ -191,6 +188,4 @@ int main() {
     problem_1472C_long_jumps_dynamic_programming(nums);
   }
 }
-
-
 ```
