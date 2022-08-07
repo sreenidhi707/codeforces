@@ -96,11 +96,6 @@ void problem_1472C_long_jumps_brute_force(std::vector<int>& nums) {
   std::cout << maxScore << std::endl;
 }
 ```
-|                   |               |
-| ----------------- | ------------- |
-| Time Complexity   | $O(n^2)$      |
-| Space Complexity  | $O(1)$        |
-
 ---
 
 ### Dynamic Programming
